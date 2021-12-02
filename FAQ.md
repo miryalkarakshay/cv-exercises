@@ -18,3 +18,9 @@ fi
 ### Access denied / Password issues
 - Problem: login at [NextCloud](https://nc.informatik.uni-freiburg.de/index.php/apps/rainloop/) works but not when using ssh
 - Solution: do not use Umlauts (äöüß etc) in you password. Different encodings in the browser (setting the password) and terminal lead to different hashes
+
+
+## Additional Material
+### Batch Norm
+- nice explanation of intuition and parameters
+- [batchnorm-towardsdatascience](https://towardsdatascience.com/batch-norm-explained-visually-how-it-works-and-why-neural-networks-need-it-b18919692739)
