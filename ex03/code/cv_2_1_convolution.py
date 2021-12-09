@@ -7,7 +7,7 @@ def convolve2D(image, kernel, padding=0, strides=1):
         https://medium.com/analytics-vidhya/2d-convolution-using-python-numpy-43442ff5f381
         and fixed the indexing for the output image
     """
-    # Cross Correlation
+    # Do convolution instead of Cross Correlation
     kernel = np.flipud(np.fliplr(kernel))
 
     # Gather Shapes of Kernel + Image + Padding
@@ -16,10 +16,10 @@ def convolve2D(image, kernel, padding=0, strides=1):
     # since slicing end is exclusive, uneven kernel shapes would be too small
     xKernRight = int(np.around(xKernShape / 2.))
     yKernShape = kernel.shape[1]
-    yKernLeft = yKernShape // 2
-    yKernRight = int(np.around(yKernShape / 2.))
-    xImgShape = image.shape[0]
-    yImgShape = image.shape[1]
+    yKernUp = yKernShape // 2
+    yKernDown = int(np.around(yKernShape / 2.))
+    xImgShape = image.shape[1]
+    yImgShape = image.shape[0]
 
     # Shape of Output Convolution
     # START TODO ###################
@@ -27,7 +27,7 @@ def convolve2D(image, kernel, padding=0, strides=1):
     # yOutput = 
     raise NotImplementedError
     # END TODO ###################
-    output = np.zeros((xOutput, yOutput))
+    output = np.zeros((yOutput, xOutput))
 
     # Apply Equal Padding to All Sides
     if padding != 0:
@@ -41,7 +41,7 @@ def convolve2D(image, kernel, padding=0, strides=1):
     # Indices for output image
     x_out = y_out = -1
     # Iterate through image
-    for y in range(yKernLeft, imagePadded.shape[1], strides):
+    for y in range(yKernUp, imagePadded.shape[0], strides):
         # START TODO ###################
         # Exit Convolution before y is out of bounds
         raise NotImplementedError
@@ -54,7 +54,6 @@ def convolve2D(image, kernel, padding=0, strides=1):
         # to the corresponding pixel in the output image
         raise NotImplementedError
         # END TODO ###################
-
     return output
 
 
@@ -66,5 +65,5 @@ if __name__ == '__main__':
     kernel = np.array([[-1, -1, -1], [-1, 8, -1], [-1, -1, -1]])
 
     # Convolve and Save Output
-    output = convolve2D(image, kernel, padding=2)
+    output = convolve2D(image, kernel, padding=2, strides=2)
     cv2.imwrite('2DConvolved.png', output)
