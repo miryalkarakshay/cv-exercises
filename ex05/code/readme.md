@@ -9,8 +9,10 @@ The code was tested with python 3.8 and PyTorch 1.9. To install the requirements
 pip install -r requirements.txt
 ```
 
-Note: Since the gcc version on the pool is not compatible yet, please ignore the coda correlation until next week.
------------------
+#### Note: 
+
+Since the gcc version on the pool is not compatible yet, please ignore the cuda correlation until next week.
+
 
 The FlowNetC model can be used with a CUDA correlation layer or a python correlation layer. The CUDA correlation
 layer is faster but needs to be precompiled. To compile the CUDA correlation layer, run:
