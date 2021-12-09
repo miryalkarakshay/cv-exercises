@@ -25,7 +25,14 @@ fi
 - list folder and file sizes in home: `cd ~`, `du --max-depth=1 -B M`
 - you should be able to delete .cache (`rm -r .cache`) without negative impact
 - also check your trash and .local and .share and your mailfolder if you can reduce them but be careful!
-- TODO: monitor vscode-server can be large
+- **vscode-server can be large**
+  - here is a nice solution to move it to your project space
+  - it involves creating a symlink in your home directory
+  - [move-vscode-server](https://stackoverflow.com/questions/62613523/how-to-change-vscode-server-directory)
+- **pytorch pretrained models**
+  - the pretrained weights are stored under `~/.cache/torch...`
+  - change this directory in all python scripts
+  - [see stackoverflow](https://stackoverflow.com/questions/52628270/is-there-any-way-i-can-download-the-pre-trained-models-available-in-pytorch-to-a)
 
 
 ## Additional Material
