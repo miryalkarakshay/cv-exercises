@@ -29,7 +29,7 @@ python setup.py install
 
 ##### FlowNetC
 
-Pre-training is currently supported on the FlyingThings dataset. Pre-training on FlyingChairs will be added later.
+Pre-training is currently supported on the FlyingThings dataset and models can be found at ```/project/cv-ws2122/shared-data1/OpticalFlowPretrainedModels```. Pre-training on FlyingChairs will be added later.
 ```bash
 python train.py --output /your/output/directory --model FlowNetC --cuda_corr
 ```
