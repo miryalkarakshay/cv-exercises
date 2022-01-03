@@ -13,7 +13,8 @@ def convolve2D(image, kernel, padding=0, strides=1):
     # START TODO ###################
     # xOutput =
     # yOutput = 
-    raise NotImplementedError
+    xOutput = int((xImgShape-xKernShape+(2*padding))/strides + 1)
+    yOutput = int((yImgShape-yKernShape+(2*padding))/strides + 1)
     # END TODO ###################
     output = np.zeros((xOutput, yOutput))
 
@@ -21,7 +22,7 @@ def convolve2D(image, kernel, padding=0, strides=1):
     if padding != 0:
         # START TODO ###################
         # imagePadded = 
-        raise NotImplementedError
+        imagePadded = np.pad(image,((padding,padding),(padding,padding)))
         # END TODO ###################
     else:
         imagePadded = image
@@ -30,7 +31,8 @@ def convolve2D(image, kernel, padding=0, strides=1):
     for y in range(image.shape[1]):
         # Exit Convolution
         # START TODO ###################
-        raise NotImplementedError
+        if y % strides == 0:
+            break
         # END TODO ###################
         
         # Only Convolve if y has gone down by the specified Strides
