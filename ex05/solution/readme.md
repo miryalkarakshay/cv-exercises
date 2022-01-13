@@ -112,6 +112,8 @@ python eval.py --output /your/output/directory --model FlowNetS --dataset Sintel
 ```
 
 ### Results
+Finetuned models are provided under /project/cv-ws2122/shared-data1/OpticalFlowFinetunedModels/
+
 - training FlowNetS on Chairs for 600k iterations and evaluating on SintelFull: AEPE=4.94
 - training FlowNetC on Chairs for 600k iterations and evaluating on SintelFull: AEPE=4.16
 - training FlowNetS on Chairs for 600k iterations and evaluating on Sintel (our test split): AEPE=0.60
