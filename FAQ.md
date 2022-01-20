@@ -65,6 +65,15 @@ Then, when you select tfpool21, it will first connect to login and then to tfpoo
 
 This is required when running jupyter notebook that requires libraries that are not installed on the login node (exercise 07).
 
+### Tensorboard visualization in vscode
+To run tensorboard, you run the command from the terminal:
+
+`tensorboard --logdir path`
+
+This will show a link and probably a window will pop-up with 'open-in-local-browser'
+
+if it does not pop up: hover over link in cmd and click on 'follow link using forwarded port'
+
 ## Additional Material
 ### Batch Norm
 - nice explanation of intuition and parameters
