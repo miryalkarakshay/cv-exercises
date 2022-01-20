@@ -45,7 +45,7 @@ fi
 - activate our environment: `conda activate cvenv`
 - check if the output of  `which python` equals `/project/cv-ws2122/shared-data1/miniconda3/envs/cvenv/bin/python`
 
-### Remote SSH in vscode directly to one of the pool machines
+### Remote SSH in vscode directly to a pool machine
 Instead of connecting vscode to the login node via ssh and then connect in the terminal to one of the pool machines, one can directly connect via ssh to a pool machine as follows:
 - Crtl+shift+p: then Remote-SSH: Open SSH Configuration File and choose your loca config file.
 - Usually you will see an entry for every server like:
