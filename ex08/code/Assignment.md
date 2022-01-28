@@ -35,11 +35,11 @@ When we move past a scene, far away objects move slower in the image than object
 With the depth we have the necessary information now, when we want to assemble new images.
 One example for this is a new feature from facebook:
 - [Facebooks 3D image](https://arxiv.org/pdf/2008.12298v1.pdf)
-- Implement this without the inpainting part
+- Implement something similar to this without the inpainting part
     - estimate the depth with the monodepth network
-    - backproject rgb and depth image and get the point cloud
+    - backproject rgb and depth image and get the point cloud. This requires the camera intrinsics
     - rotate the pointcloud, i.e. create a new view
     - project the points back into the image
-    - create a give for multiple view points
+    - create a gif for multiple view points
 - feel free to try out more things with depth, for example background removal for exposed objects
 - run monodepth estimation on your own images
